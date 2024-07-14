@@ -3,11 +3,26 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply overflow-hidden  bg-white;
+  }
+
+  .h1 {
+    @apply text-[54px] lg:text-[108px]  font-bold capitalize leading-[120%] tracking-[-0.05em] mb-2;
+  }
+
+  .subtitle {
+    @apply text-lg mb-8 font-light;
+  }
+
   li {
     @apply uppercase tracking-widest;
   }
 
   .section {
     @apply h-screen w-screen;
+  }
+  .btn {
+    @apply py-[18px] px-[50px] flex items-center justify-center uppercase font-semibold text-white bg-black;
   }
 }

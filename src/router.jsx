@@ -4,14 +4,14 @@ import Inicio from "./pages/Inicio";
 import AboutMe from "./pages/AboutMe";
 import Experience from "./pages/Experience";
 import Projects from "./pages/Projects";
-import Socials from "./pages/Socials";
 import Contact from "./pages/Contact";
-
+import Error404 from "./pages/Error404";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
+    errorElement: <Error404 />,
     children: [
       {
         index: true,
@@ -29,10 +29,7 @@ const router = createBrowserRouter([
         path: "/proyectos",
         element: <Projects />,
       },
-      {
-        path: "/sociales",
-        element: <Socials />,
-      },
+
       {
         path: "/contacto",
         element: <Contact />,

@@ -1,7 +1,17 @@
-import { Box, Container } from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
+import {
+  RiBriefcase4Fill,
+  RiTeamFill,
+  RiTodoFill,
+  RiArrowDownSLine,
+} from "react-icons/ri";
+import Socials from "./Socials";
+import Button from "@mui/material/Button";
+import SendIcon from "@mui/icons-material/Send";
+import { Box, Container } from "@mui/material";
 
-const AboutMe = () => {
+const Hero = () => {
   return (
     <section className="py-12 xl:py-24 h-full bg-pink-100">
       <Container>
@@ -16,13 +26,24 @@ const AboutMe = () => {
               Programador Analista
             </p>
             {/* buttons */}
+            <div>
+              <Link to={"/contacto"}>
+                <Button variant="outlined" endIcon={<SendIcon />}>
+                  Send
+                </Button>
+              </Link>
+            </div>
           </div>
           {/* img */}
           <div className="hidden xl:flex relative">image</div>
         </Box>
+        {/* icon */}
+        <div className="hidden md:flex absolte left-2/4 bottom-44 xl:bottom-12 animate-bounce">
+          <RiArrowDownSLine className="text-3xl text-black" />
+        </div>
       </Container>
     </section>
   );
 };
 
-export default AboutMe;
+export default Hero;
